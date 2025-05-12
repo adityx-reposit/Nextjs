@@ -1,17 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 
 
-export function GET(){
-    return NextResponse.json({
-        user:"aditya",
-        email:"Aditryayafav@gmail"
-    })
-}
+export async function POST(req:NextRequest){
+      const data=await req.json();
 
-export function POST(){
+      console.log(data);
+      
+      
     return NextResponse.json({
-        user:"aditya",
-        email:"Aditryayafav@gmail"
+      message:"you have signed in"
     })
 }
 export default function UserHandler(){
