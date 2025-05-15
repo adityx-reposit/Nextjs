@@ -16,7 +16,7 @@ export default function Signin(){
                setPassword(e.target.value)
              }} type="password" placeholder="Password" />
              <button onClick={()=>{
-                   axios.post("/api/v1/user/details",{
+                   axios.post("http://localhost:3000/api/v1/signup",{
                     username,
                     password
                    })
